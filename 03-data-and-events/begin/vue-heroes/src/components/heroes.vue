@@ -60,7 +60,12 @@
               <div class="field">
                 <label class="checkbox" for="active">
                   active
-                  <input type="checkbox" class="is-primary" id="active" />
+                  <input 
+                    type="checkbox" 
+                    class="is-primary"
+                    id="active" 
+                    v-model="hero.active"
+                  />
                 </label>
               </div>
             </div>
