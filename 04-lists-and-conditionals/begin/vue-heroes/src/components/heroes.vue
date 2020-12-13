@@ -11,7 +11,10 @@
         <ul class="list is-hoverable">
           
           <li v-for="hero in heroes" :key="hero.id">
-            <a class="list-item">
+            <a 
+               class="list-item" 
+               @click="selectedHero = hero"
+               :class="{'is-active': selectedHero == hero}">
 
               <span>{{ hero.firstName }}</span>
             
@@ -70,12 +73,7 @@ export default {
   name: 'Heroes',
   data() {
     return {
-      selectedHero: {
-        id: 111,
-        firstName: '...',
-        lastName: '...',
-        description: '...',
-      },
+      selectedHero: {},
       heroes: [
         {
           id: 10,
@@ -86,19 +84,19 @@ export default {
         {
           id: 20,
           firstName: 'Madelyn',
-          lastName: 'Papa',
+          lastName: 'Trapp',
           description: 'the cat whisperer',
         },
         {
           id: 30,
           firstName: 'Haley',
-          lastName: 'Papa',
+          lastName: 'Baner',
           description: 'pen wielder',
         },
         {
           id: 40,
           firstName: 'Landon',
-          lastName: 'Papa',
+          lastName: 'Willis',
           description: 'arc trooper',
         },
       ],
